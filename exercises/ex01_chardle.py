@@ -10,7 +10,7 @@ if len(letter_guess) != 1:
     print("Error: Character must be a single character.")
     exit()
 letter_counter: int = 0
-print("Searching for " + letter_guess + "in" + word_guess)
+print("Searching for " + letter_guess + " in " + word_guess)
 
 if letter_guess == word_guess[0]:
     print(letter_guess + " found at index 0")
