@@ -11,8 +11,7 @@ word_guess: str = str(input(f"What is your {len(secret_word)}-letter guess? "))
 # If word is not 6 letters, tell them
 while len(word_guess) != len(secret_word):
     print(f"That was not {len(secret_word)} letters! ")
-    word_guess: str = input("Try again: ")
-
+    word_guess: != input("Try again: ")
 
 secret_index: int = 0
 guess_index: int = 0
