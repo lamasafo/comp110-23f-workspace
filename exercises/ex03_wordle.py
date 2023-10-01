@@ -42,9 +42,9 @@ def input_guess(expected_length: int)-> str:
 
 def main() -> None:
     """The entrypoint of the program and main game loop."""
-    guess_index: int = 1
+    index: int = 1
     secret_word: str = "codes"
-    word_guess: ""
+    word_guess: str = ""
     turns: int = 6
     while guess_index <= turns and word_guess != secret_word:
         print(f"=== Turn {guess_index}/{turns} ===")
@@ -59,4 +59,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-    
