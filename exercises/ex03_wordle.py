@@ -31,3 +31,11 @@ def emojified(word_guess: str, secret_word: str)-> str:
                 emoji += WHITE_BOX
         guess_index += 1
     return emoji 
+
+
+def input_guess(expected_length: int)-> str:
+    """Telling user to input the right number of characters."""
+    word: str = input(f"Enter a {expected_length} character word: ")
+    while expected_length != len(word):
+        word = input(f"That wasn't {expected_length} chars! Try again: ")
+    return word
