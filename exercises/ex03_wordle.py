@@ -6,9 +6,10 @@ WHITE_BOX: str = "\U00002B1C"
 GREEN_BOX: str = "\U0001F7E9"
 YELLOW_BOX: str = "\U0001F7E8"
 
-def contains_char(word: str, character: str)-> bool:
-    """Searching for character in the word"""
-    assert len(character)== 1
+
+def contains_char(word: str, character: str) -> bool:
+    """Searching for character in the word."""
+    assert len(character) == 1
     index: int = 0
     while index < len(word):
         if word[index] == character:
@@ -16,8 +17,9 @@ def contains_char(word: str, character: str)-> bool:
         index += 1
     return False
 
-def emojified(word_guess: str, secret_word: str)-> str:
-    """Determining if the guessed characters are in the secret word"""
+
+def emojified(word_guess: str, secret_word: str) -> str:
+    """Determining if the guessed characters are in the secret word."""
     assert len(word_guess) == len(secret_word)
     guess_index: int = 0
     emoji: str = ""
@@ -33,16 +35,17 @@ def emojified(word_guess: str, secret_word: str)-> str:
     return emoji 
 
 
-def input_guess(expected_length: int)-> str:
+def input_guess(expected_length: int) -> str:
     """Telling user to input the right number of characters."""
     word: str = input(f"Enter a {expected_length} character word: ")
     while expected_length != len(word):
         word = input(f"That wasn't {expected_length} chars! Try again: ")
     return word
 
+
 def main() -> None:
     """The entrypoint of the program and main game loop."""
-    index: int = 1
+    guess_index: int = 1
     secret_word: str = "codes"
     word_guess: str = ""
     turns: int = 6
@@ -56,6 +59,7 @@ def main() -> None:
             guess_index += 1
     if word_guess != secret_word:
         print(f"X/{turns} - Sorry, try again tomorrow!")
+
 
 if __name__ == "__main__":
     main()
