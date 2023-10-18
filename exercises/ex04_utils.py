@@ -4,7 +4,7 @@ __author__ = "730478392"
 
 
 def all(number_list: list[int], int_input: int) -> bool:
-    """"Finding if all numbers in list match the the input."""
+    """Finding if all numbers in list match the the input."""
     index: int = 0
     while index < len(number_list):
         if number_list[index] != int_input:
