@@ -5,7 +5,7 @@ _author_ = "730478392"
 
 def invert(dictionary: dict[str, str]) -> dict[str, str]:
     """Invert the key value pairs in a dictionary."""
-    output: dict[str, str] = dict ()
+    output: dict[str, str] = dict()
     for key, value in dictionary.items():
         output[value] = key
     return output
@@ -24,7 +24,7 @@ def favorite_color(dictionary: dict[str, str]) -> str:
         if counter[color] > high:
             most_popular = color
             high = counter[color]
-        return most_popular
+    return most_popular
     
 
 def count(values: list[str]) -> dict[str, int]:
@@ -46,12 +46,12 @@ def alphapetizer(words: list[str]) -> dict[str, list[str]]:
         if key in dictionary:
             dictionary[key].append(word)
         else:
-            dictionary[key] = word
+            dictionary[key] = [word]
     return dictionary 
 
 
-def update_attendance(students: dict[str, list[str]], day: str, student: str)-> dict[str, list[str]]:
-    """Updates attendace"""
+def update_attendance(students: dict[str, list[str]], day: str, student: str) -> dict[str, list[str]]:
+    """Updates attendace."""
     if day in students:
         students[day].append(student)
     else:
