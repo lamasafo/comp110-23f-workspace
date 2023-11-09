@@ -38,7 +38,7 @@ def count(values: list[str]) -> dict[str, int]:
     return dictionary
 
 
-def alphapetizer(words: list[str]) -> dict[str, list[str]]:
+def alphabetizer(words: list[str]) -> dict[str, list[str]]:
     """Place words in groups based on first letter."""
     dictionary: dict[str, list[str]] = {}
     for word in words:
