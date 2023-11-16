@@ -8,6 +8,8 @@ def invert(dictionary: dict[str, str]) -> dict[str, str]:
     output: dict[str, str] = dict()
     for key, value in dictionary.items():
         output[value] = key
+        if value in output.keys():
+            raise KeyError
     return output
 
 
@@ -52,8 +54,8 @@ def alphabetizer(words: list[str]) -> dict[str, list[str]]:
 
 def update_attendance(students: dict[str, list[str]], day: str, student: str) -> dict[str, list[str]]:
     """Updates attendace."""
-    if day in students:
-        students[day].append(student)
+    if day == "" or student == "":
+        raise 
     else:
         students[day] = [student]
     return students
